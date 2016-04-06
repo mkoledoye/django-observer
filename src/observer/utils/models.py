@@ -1,4 +1,5 @@
-from django.db.models.loading import get_model
+from django.apps import apps
+get_model = apps.get_model
 from django.db.models.fields import FieldDoesNotExist
 
 

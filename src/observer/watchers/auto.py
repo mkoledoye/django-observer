@@ -1,9 +1,9 @@
 from django.db.models import ForeignKey, OneToOneField, ManyToManyField
-from django.contrib.contenttypes.generic import (GenericForeignKey,
+from django.contrib.contenttypes.fields import (GenericForeignKey,
                                                  GenericRelation)
-from base import WatcherBase
-from value import ValueWatcher
-from related import RelatedWatcher, ManyRelatedWatcher, GenericRelatedWatcher
+from .base import WatcherBase
+from .value import ValueWatcher
+from .related import RelatedWatcher, ManyRelatedWatcher, GenericRelatedWatcher
 
 
 RELATIONAL_FIELDS = (ForeignKey, OneToOneField,)

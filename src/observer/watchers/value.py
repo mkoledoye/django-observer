@@ -3,7 +3,7 @@ from django.db.models.signals import post_save
 from observer.investigator import Investigator
 from observer.utils.signals import (register_reciever,
                                     unregister_reciever)
-from base import WatcherBase
+from .base import WatcherBase
 
 
 class ValueWatcher(WatcherBase):

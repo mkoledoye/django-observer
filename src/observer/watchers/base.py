@@ -8,7 +8,7 @@ def is_relation_ready(relation):
     """
     Return if the relation is ready to use
     """
-    if isinstance(relation, basestring) or relation._meta.pk is None:
+    if isinstance(relation, str) or relation._meta.pk is None:
         return False
     return True
 

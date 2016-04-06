@@ -2,13 +2,13 @@ from django.db.models.signals import pre_save
 from django.db.models.signals import post_save
 from django.db.models.signals import m2m_changed
 from django.core.exceptions import ObjectDoesNotExist
-from django.contrib.contenttypes.generic import GenericForeignKey
+from django.contrib.contenttypes.fields import GenericForeignKey
 from observer.conf import settings
 from observer.compat import lru_cache
 from observer.investigator import Investigator
 from observer.utils.signals import register_reciever, unregister_reciever
-from base import WatcherBase
-from value import ValueWatcher
+from .base import WatcherBase
+from .value import ValueWatcher
 
 
 class RelatedWatcherBase(WatcherBase):
